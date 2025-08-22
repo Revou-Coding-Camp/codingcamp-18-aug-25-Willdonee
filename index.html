@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h1 class="app-title">Todo List App</h1>
+            
+            <!-- Add Todo Form -->
+            <form id="todoForm" class="todo-form">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        placeholder="Add a todo..." 
+                        required
+                        maxlength="100"
+                    >
+                    <input 
+                        type="date" 
+                        id="dateInput" 
+                        required
+                    >
+                    <button type="submit" class="add-btn">+</button>
+                </div>
+                <div id="errorMessage" class="error-message"></div>
+            </form>
+
+            <!-- Filter and Actions -->
+            <div class="controls">
+                <div class="filter-group">
+                    <button id="filterAll" class="filter-btn active">ALL</button>
+                    <button id="filterPending" class="filter-btn">PENDING</button>
+                    <button id="filterCompleted" class="filter-btn">COMPLETED</button>
+                    <button id="filterOverdue" class="filter-btn">OVERDUE</button>
+                </div>
+                <button id="deleteAllBtn" class="delete-all-btn">DELETE ALL</button>
+            </div>
+
+            <!-- Todo List -->
+            <div class="todo-list-container">
+                <div class="todo-header">
+                    <div class="header-cell">TASK</div>
+                    <div class="header-cell">DUE DATE</div>
+                    <div class="header-cell">STATUS</div>
+                    <div class="header-cell">ACTIONS</div>
+                </div>
+                <div id="todoList" class="todo-list">
+                    <div class="no-tasks">No task found</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
